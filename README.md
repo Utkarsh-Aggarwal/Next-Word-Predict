@@ -12,33 +12,18 @@ It uses an LSTM (Long Short-Term Memory) neural network to learn patterns in the
 Given a user input (partial sentence), it predicts the most likely next word.
 
 📁 Project Structure
-bash
-Copy
-Edit
 NEXT-Word/
 ├── app.py                   # Gradio interface and prediction logic
 ├── requirements.txt         # Dependencies for Hugging Face Spaces
 ├── tokenizer.pickle         # Saved tokenizer used during training
 └── next_word_lstm_model.h5  # Trained LSTM model
+
 📦 Requirements
 The dependencies are handled automatically on Hugging Face Spaces via requirements.txt. If running locally, you can install them with:
 
-bash
-Copy
-Edit
 pip install -r requirements.txt
-Contents of requirements.txt:
 
-nginx
-Copy
-Edit
-tensorflow
-gradio
-numpy
 ▶️ Running Locally
-bash
-Copy
-Edit
 python app.py
 This will launch a Gradio interface in your browser where you can test the next word predictions interactively.
 
@@ -55,6 +40,3 @@ The tokenizer must match the one used during training.
 The LSTM model expects input of fixed sequence length.
 
 Only the most probable word is returned, but the model can be extended to return the top-k words with probabilities.
-
-📜 License
-This project is open-source and available under the MIT License.
